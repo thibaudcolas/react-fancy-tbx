@@ -5,6 +5,9 @@
   "module": "dist/react-fancy-tbx.js",
   "types": "dist/react-fancy-tbx.d.ts",
   "sideEffects": false,
+  "files": [
+    "dist/**/*.{js,mjs}"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
