@@ -1,0 +1,20 @@
+{
+  "name": "fancy-tbx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.223"
+  },
+  "scripts": {
+    "build": "swc index.ts --out-dir dist --delete-dir-on-start",
+    "report:package": "npm pack --loglevel notice 2>&1 >/dev/null | sed -e 's/^npm notice //' && rm *.tgz"
+  }
+}
