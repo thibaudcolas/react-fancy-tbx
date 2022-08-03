@@ -7,24 +7,26 @@ import pkg from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [react()],
+  // plugins: [react(), dts()],
   build: {
     lib: {
       entry: path.resolve(__dirname, `src/lib/${pkg.name}.ts`),
-      formats: ["es", "cjs"],
+      name: "ReactFancyTBX",
+      // formats: ["es", "cjs"],
       // formats: ['es', 'umd',],
     },
-    rollupOptions: {
-      external: [
-        ...Object.keys(pkg.dependencies),
-        // ...Object.keys(pkg.peerDependencies),
-        "react/jsx-runtime",
-      ],
-      output: {
-        globals: {
-          "react/jsx-runtime": "jsxRuntime",
-        },
-      },
-    },
+    // rollupOptions: {
+    //   external: [
+    //     ...Object.keys(pkg.dependencies),
+    //     // ...Object.keys(pkg.peerDependencies),
+    //     "react/jsx-runtime",
+    //   ],
+    //   output: {
+    //     globals: {
+    //       "react/jsx-runtime": "jsxRuntime",
+    //     },
+    //   },
+    // },
   },
 });

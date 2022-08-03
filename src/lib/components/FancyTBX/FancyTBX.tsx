@@ -7,7 +7,7 @@ export interface FancyTBXProps {
 const FancyTBX = ({ open }: FancyTBXProps) => (
   <dialog className="FancyTBX" open={open}>
     <p>It’s very fancy</p>
-    <ExpandingDots />
+    <ExpandingDots speed="fast" />
   </dialog>
 );
 

@@ -5,12 +5,9 @@
   "module": "dist/react-fancy-tbx.js",
   "types": "dist/react-fancy-tbx.d.ts",
   "sideEffects": false,
-  "files": [
-    "dist/**/*.{js,mjs,d.ts,css}"
-  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && sass src/lib/react-fancy-tbx.scss > dist/react-fancy-tbx.css",
+    "build": "vite build",
     "preview": "vite preview",
     "report:package": "npm pack --loglevel notice 2>&1 >/dev/null | sed -e 's/^npm notice //' && rm *.tgz"
   },
